@@ -21,7 +21,20 @@
         <p class="lead">
           <?php echo $forecast['currently']['summary']; ?>
         </p>
+        <p class="lead">
+           Wind: <?php echo round($forecast['currently']['windSpeed']); ?> MPH
+        </p>
+
+        <p class="lead">
+           Percipitation: <?php echo round($forecast['currently']['precipProbability']); ?> %
+        </p>
+
+        <p class="lead">
+          Humidity: <?php echo round($forecast['currently']['humidity']); ?> %
+        </p>
       </div>
+
+      <p><?php echo $feels ?></p>
       <div class="row">
         <?php foreach($forecast['daily']['data'] as $day): ?>
           <div class="col-12 col-md-3">
